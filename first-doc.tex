@@ -6,6 +6,7 @@
 \usepackage{setspace}
 \usepackage[backend=bibtex,style=verbose-trad2]{biblatex}
 \usepackage{siunitx}
+\usepackage{multirow}
 
 \title{My first document}
 \date{2018-09-29}
@@ -181,6 +182,26 @@
 	    \end{tabular}
 	\end{center}
     \end{table}    
+
+    \paragraph{}
+    Another table
+
+    \begin{table}[h!]
+	\begin{center}
+	    \caption{Multicolumn table.}
+	    \label{tab:table2}
+	    \begin{tabular}{l|S|r}
+		Column 1 & Column 2 & Column 3 \\
+		$\alpha$ & $\beta$  & $\gamma$ \\
+		\hline
+		\multicolumn{2}{c|}{12} & a \\
+		\hline
+		2 & 10.1 & b \\ 
+		3 & 10.1 & c \\ 
+		4 & 10.1 & d \\ 
+	    \end{tabular}
+	\end{center}
+    \end{table}
 
     \newpage
     
