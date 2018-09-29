@@ -7,6 +7,7 @@
 \usepackage[backend=bibtex,style=verbose-trad2]{biblatex}
 \usepackage{siunitx}
 \usepackage{multirow}
+\usepackage{booktabs}
 
 \title{My first document}
 \date{2018-09-29}
@@ -191,17 +192,20 @@
 	    \caption{Multicolumn table.}
 	    \label{tab:table2}
 	    \begin{tabular}{l|S|r}
+		\toprule
 		Column 1 & Column 2 & Column 3 \\
+		\midrule
 		$\alpha$ & $\beta$  & $\gamma$ \\
-		\hline
+		\midrule
 		\multicolumn{2}{c|}{12} & a \\
-		\hline
+		\midrule
 		2 & 10.1 & b \\ 
-		\hline
-		3 & \multicolumn{2}{c|}{\multirow{2}{*}{1234}} \\ 
-		4 & \multicolumn{2}{c|}{} \\ 
-		\hline
+		\midrule
+		3 & \multicolumn{2}{c}{\multirow{2}{*}{1234}} \\ 
+		4 & \multicolumn{2}{c}{} \\ 
+		\midrule
 		5 & 40.4 & e \\ 
+		\bottomrule
 	    \end{tabular}
 	\end{center}
     \end{table}
