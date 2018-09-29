@@ -2,6 +2,7 @@
 
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{subcaption}
 
 \title{My first document}
 \date{2018-09-29}
@@ -92,12 +93,26 @@
 
     \section{Pictures}
 
-    \begin{figure}
+    \begin{figure}[h!]
 	\includegraphics[width=\linewidth]{images/boat.png}
 	\caption{A boat.}
 	\label{fig:boat1}
     \end{figure}
 
     Figure \ref{fig:boat1} shows a boat.
+
+    \begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.4\linewidth}
+		\includegraphics[width=\linewidth]{images/boat.png}
+		\caption{A boat.}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.4\linewidth}
+		\includegraphics[width=\linewidth]{images/boat.png}
+		\caption{Another boat.}
+	\end{subfigure}
+	\caption{The same boat two times.}
+	\label{fig:twoboats}
+    \end{figure}
 
 \end{document}
