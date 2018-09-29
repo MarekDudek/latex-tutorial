@@ -8,10 +8,14 @@
 \date{2018-09-29}
 \author{Marek Dudek}
 
+\setcounter{tocdepth}{1}
+
 \begin{document}
 
     \pagenumbering{gobble}
     \maketitle
+    \newpage
+    \tableofcontents
     \newpage
     \pagenumbering{arabic}
 
@@ -114,5 +118,20 @@
 	\caption{The same boat two times.}
 	\label{fig:twoboats}
     \end{figure}
+
+    \newpage
+
+    \section{Tables}
+
+    \begin{table}[h!]
+	\caption{Dummy table}
+    \end{table}
+
+    \newpage
+
+    \begin{appendix}
+	\listoffigures
+	\listoftables
+    \end{appendix}
 
 \end{document}
