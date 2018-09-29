@@ -13,3 +13,6 @@ rm -f ./*.lot
 
 rm -f ./*.bbl
 rm -f ./*.blg
+
+rm -f ./*-blx.bib
+rm -f ./*.run.xml
