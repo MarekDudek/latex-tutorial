@@ -12,6 +12,7 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{hyperref}
+\usepackage{enumitem}
 
 \title{My first document}
 \date{2018-09-29}
@@ -381,6 +382,66 @@ print S(@ARGV);sub S{$r=(@_[0]%4==0&&@_[0]%100!=0)||@_[0]%400=0;}
     \section{Hyperlinks}
 
     This is my link: \href{http://www.onet.pl}{Onet}.
+
+    \newpage
+
+    \section{Lists}
+    
+    \subsection{Unordered list}
+
+    \begin{itemize}
+        \item default
+        \item[--] dash
+        \item[$-$] dash
+        \item[$\ast$] asterix 
+        \item[$\lambda$] any math character
+    \end{itemize}
+
+    \subsection{Ordered list}
+
+    \begin{enumerate}
+        \item One
+        \item Two
+        \item Three
+    \end{enumerate}
+
+    \subsection{Ordered list, roman style}
+
+    \begin{enumerate}[label=(\roman*)]
+        \item One
+        \item Two
+        \item Three
+    \end{enumerate}
+
+    \subsection{Ordered list, arabic style}
+
+    \begin{enumerate}[label=(\arabic*)]
+        \item One
+        \item Two
+        \item Three
+    \end{enumerate}
+
+    \subsection{Ordered list, alphabetical style}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item One
+        \item Two
+        \item Three
+    \end{enumerate}
+
+
+    \subsection{Nested list}
+
+    \begin{enumerate}
+        \item One
+            \begin{enumerate}
+                \item Two
+                \item Three
+                \item Four
+            \end{enumerate}
+        \item Five
+        \item Six
+    \end{enumerate}
 
     \newpage
     
