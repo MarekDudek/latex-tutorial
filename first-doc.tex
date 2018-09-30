@@ -9,6 +9,8 @@
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage{longtable}
+\usepackage{listings}
+\usepackage{color}
 
 \title{My first document}
 \date{2018-09-29}
@@ -21,6 +23,23 @@
 \sisetup{
     round-mode = places,
     round-precision = 2
+}
+
+\renewcommand\lstlistingname{Quelltext}
+
+\lstset{
+    language=Perl,
+    basicstyle=\small\sffamily,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=tb,
+    tabsize=4,
+    columns=fixed,
+    showstringspaces=false,
+    showtabs=false,
+    keepspaces,
+    commentstyle=\color{red},
+    keywordstyle=\color{blue}
 }
 
 \begin{document}
@@ -343,11 +362,24 @@
     \end{longtable}
 
     \newpage
+
+    \section{Code listing}
+    \subsection{Embedded}
+
+    \begin{lstlisting}
+#!/usr/bin/perl
+print S(@ARGV);sub S{$r=(@_[0]%4==0&&@_[0]%100!=0)||@_[0]%400=0;}
+    \end{lstlisting}
+
+    \subsection{Imported from file}
+
+    \lstinputlisting{script.pl}
+
+    \newpage
     
     \begin{appendix}
 	\listoffigures
 	\listoftables
     \end{appendix}
-
 
 \end{document}
