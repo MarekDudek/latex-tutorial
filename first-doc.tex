@@ -11,6 +11,7 @@
 \usepackage{longtable}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{hyperref}
 
 \title{My first document}
 \date{2018-09-29}
@@ -374,6 +375,12 @@ print S(@ARGV);sub S{$r=(@_[0]%4==0&&@_[0]%100!=0)||@_[0]%400=0;}
     \subsection{Imported from file}
 
     \lstinputlisting{script.pl}
+
+    \newpage
+
+    \section{Hyperlinks}
+
+    This is my link: \href{http://www.onet.pl}{Onet}.
 
     \newpage
     

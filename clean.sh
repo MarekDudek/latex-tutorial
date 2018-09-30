@@ -16,3 +16,5 @@ rm -f ./*.blg
 
 rm -f ./*-blx.bib
 rm -f ./*.run.xml
+
+rm -f ./*.out
